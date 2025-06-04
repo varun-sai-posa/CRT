@@ -1,0 +1,23 @@
+find the frequency
+
+Input: arr = [1, 2, 3, 3, 2, 1], x=2
+Output: 2
+Explanation: Frequency of 2 is 2.
+
+pgm:
+
+class Solution:
+    def findFrequency(self, arr, x):
+        d={}
+        for i in arr:
+            if i in d:
+                d[i]+=1
+            else:
+                d[i]=1
+        ans=d.get(x)
+        if(ans!=None):
+            return ans
+        elif(ans==None):
+            return 0
+
+o/p: 2

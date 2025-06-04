@@ -1,0 +1,14 @@
+ROTATE RIGHT ARRAY
+
+
+class Solution:
+    def rotate(self, arr):
+        n=len(arr)
+        temp=[0]*n
+        for i in range(len(arr)):
+            idx=(i+1)%n
+            temp[idx]=arr[i]
+            
+        for i in range(len(arr)):
+            arr[i]=temp[i]
+        return arr

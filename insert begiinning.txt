@@ -1,0 +1,60 @@
+INSERRT BEGINING
+
+
+
+
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class LinkedList:
+    def __init__(self):
+        self.head=None
+    def insert_end(self,data):
+        new_node=Node(data)
+        if self.head is None:
+            self.head=new_node
+        else:
+            temp=self.head
+            while temp.next:
+                temp=temp.next
+            temp.next=new_node
+    def display(self):
+        temp=self.head
+        while temp:
+            print(temp.data)
+            temp=temp.next
+            
+    def add_ll(self):
+        temp=self.head
+        sum=0
+        while temp:
+            sum=sum+temp.data
+            temp=temp.next
+        return sum
+        
+    def getCount(self):
+        count=0
+        temp=head
+        while temp:
+            count=count+1
+            temp=temp.next
+        return count
+        
+    def insert_begining(self,data):
+        new_node=Node(data)
+        new_node.next=self.head
+        self.head=new_node
+            
+            
+            
+ll = LinkedList()
+ll.insert_end(10)
+ll.insert_begining(2222)
+ll.insert_end(20)
+ll.insert_end(30)
+ll.insert_end(40)
+ll.display()
+print("sum of element in linked list")
+ans=ll.add_ll()
+print(ans)

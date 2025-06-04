@@ -1,0 +1,42 @@
+create employee table?
+
+
+pgm:
+
+create table EMPLOYEE(
+id int,
+name varchar(150),
+dept varchar(100),
+salary varchar(200)
+);
+  
+insert into EMPLOYEE(id,name,dept,salary) value(1,"nagaraj","sales",20000);
+insert into EMPLOYEE(id,name,dept,salary) value(2,"surya","accounting",15000);
+insert into EMPLOYEE(id,name,dept,salary) value(3,"ashok","accounting",15000);
+insert into EMPLOYEE(id,name,dept,salary) value(4,"ganesh","accounting",15000);
+insert into EMPLOYEE(id,name,dept,salary) value(5,"madhu","accounting",15000);
+insert into EMPLOYEE(id,name,dept,salary) value(6,"pradeep","delivery",15000);
+insert into EMPLOYEE(id,name,dept,salary) value(7,"karthik","counter",15000);
+insert into EMPLOYEE(id,name,dept,salary) value(8,"mahesh","bills",15000);
+insert into EMPLOYEE(id,name,dept,salary) value(9,"venky","security",15000);
+insert into EMPLOYEE(id,name,dept,salary) value(10,"dinesh","hr",15000);
+
+select * from EMPLOYEE;  
+
+Output:
+
++------+---------+------------+--------+
+| id   | name    | dept       | salary |
++------+---------+------------+--------+
+|    1 | nagaraj | sales      | 20000  |
+|    2 | surya   | accounting | 15000  |
+|    3 | ashok   | accounting | 15000  |
+|    4 | ganesh  | accounting | 15000  |
+|    5 | madhu   | accounting | 15000  |
+|    6 | pradeep | delivery   | 15000  |
+|    7 | karthik | counter    | 15000  |
+|    8 | mahesh  | bills      | 15000  |
+|    9 | venky   | security   | 15000  |
+|   10 | dinesh  | hr         | 15000  |
++------+---------+------------+--------+
+  

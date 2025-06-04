@@ -1,0 +1,60 @@
+student table:
+
+pgm:
+
+create database practice;
+use practice;
+create table studnet(
+	roll_no int primary key,
+    name varchar(150) not null,
+    course_name varchar(100) not null
+);
+
+create table detail(
+	roll_no int,
+    address text,
+    phone_no varchar(20) not null,
+    foreign key (roll_no) references studnet (roll_no)
+);
+insert into studnet(roll_no,name,course_name) values
+(1,"A","AI"),
+(2,"B","CSE"),
+(3,"C","AI"),
+(4,"D","EEE"),
+(5,"E","ECE");
+select *from studnet;
+insert into detail(roll_no,address,phone_no) value(1,NULL,"123456789");
+insert into detail(roll_no,address,phone_no) value(2,"HYD","45678234");
+insert into detail(roll_no,address,phone_no) value(3,NULL,"4567678234");
+insert into detail(roll_no,address,phone_no) value(5,"DEL","45857234");
+insert into detail(roll_no,address,phone_no) value(4,"KBHP","45937484");
+select *from detail;
+
+select *
+from studnet
+join detail
+on studnet.roll_no=detail.roll_no;
+
+select* from studnet;
+insert into studnet values(10,"HELLO","ECE");
+
+select s.roll_no,s.name,s.course_name,d.phone_no
+from studnet s
+left join detail d
+on s.roll_no=d.roll_no;
+
+select s.roll_no,s.name,s.course_name,d.phone_no
+from studnet s
+inner join detail d
+on s.roll_no=d.roll_no;
+
+select * from studnet;
+select*
+from detail
+left join studnet
+on studnet.roll_no=detail.roll_no;
+
+select * 
+from studnet
+right join detail
+on studnet.roll_no=detail.roll_no;
